@@ -10,8 +10,9 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
-@Data
+
 @Document(collection = "cinema")
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 
@@ -28,6 +29,6 @@ public class Cinema {
     private List<String> backdrops;
 
     @DocumentReference
-    private List<String> reviewIds;
+    private List<Reviews> reviewIds;
 
 }

@@ -12,9 +12,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class reviews {
+public class Reviews {
 
     @Id
     private ObjectId id;
     private String body;
+
+    public Reviews(String body)
+    {
+        this.body = body;
+    }
 }
